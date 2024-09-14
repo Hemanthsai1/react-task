@@ -1,0 +1,126 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.search-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url('src/assets/earth.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  overflow: hidden;
+}
+
+.search-bar {
+  margin-top: 70px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px; 
+  transition: top 0.5s ease, transform 0.5s ease; 
+}
+
+.search-bar:focus-within {
+  top: 30%; 
+}
+
+.search-bar input {
+  width: 92%;
+  padding: 15px; 
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgb(0, 0, 0); 
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  background-color: rgb(39, 38, 38); 
+  color: white; 
+  border-color: #4f79d3; 
+}
+
+.flag-image {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 200px;
+  display: block;
+  margin: 10px auto;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0; 
+  width: 100%;
+  background-color: rgb(68, 114, 163);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+}
+
+.suggestions-list li {
+  position: relative;
+  padding: 20px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px; 
+}
+
+.suggestions-list li .overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.suggestions-list li:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+  position: absolute;
+  top: 30px;               
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  color: white;          
+  padding: 10px 20px;      
+  background-color: rgb(11, 11, 11); 
+  border: 2px solid #3f77f0; 
+  border-radius: 10px;      
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;
+  opacity: 0.9;
+}
